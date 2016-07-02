@@ -40,5 +40,8 @@ def notify_these(contests):
 if __name__ == "__main__":
 	url = "http://codeforces.com/contests"
 	while True:
-		notify_these(get_upcoming_contests(url))
-		time.sleep(5*60)
+		try:
+			notify_these(get_upcoming_contests(url))
+			time.sleep(5*60)
+		except:
+			time.sleep(5*60)
